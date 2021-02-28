@@ -1,0 +1,17 @@
+name: Backend Deploy
+
+on:
+  push: 
+    branches:
+    - main
+    paths:
+    - 'leapcode-core'/**
+
+jobs:
+  build:
+    name: Build project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+    # deploy to firebase
