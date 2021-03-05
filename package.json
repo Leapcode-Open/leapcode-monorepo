@@ -1,0 +1,40 @@
+{
+  "name": "leapcode-monorepo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Leapcode Monorepo",
+  "scripts": {
+    "setup": "npm-run-all setup:*",
+    "setup:client": "cd ./leapcode-next && npm install",
+    "setup:server": "cd ./leapcode-core && npm install",
+    "start" : "npm-run-all -p start:server start:client",
+    "start:client" : "cd ./leapcode-next && npm run dev",
+    "start:server" : "cd ./leapcode-core && npm start",
+    "build": "npm-run-all -p build:*",
+    "build:client": "cd ./leapcode-next && npm run build",
+    "test": "npm-run-all test:*",
+    "test:client": "cd ./leapcode-next && npm test",
+    "test:server": "cd ./leapcode-core && npm test",
+    "clean": "npm run clean:deps && npm run clean:coverage && npm run clean:build-artifacts",
+    "clean:deps": "rm -rf ./node_modules && rm -rf .*/node_modules",
+    "clean:coverage": "rm -rf .*/coverage",
+    "clean:build-artifacts": "rm -rf .*/lib"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "shx": "^0.3.3",
+    "sinon": "^7.4.1",
+    "sinon-express-mock": "^2.2.1",
+    "start-server-and-test": "^1.11.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leapcode-Open/leapcode-monorepo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leapcode-Open/leapcode-monorepo/issues"
+  },
+  "homepage": "https://github.com/Leapcode-Open/leapcode-monorepo#readme"
+}

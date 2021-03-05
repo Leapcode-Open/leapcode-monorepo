@@ -5,6 +5,7 @@ on:
     branches:
     - main
     paths:
+    # this workflow will only run when we have changes in backend code
     - 'leapcode-core/**'
 
 jobs:
