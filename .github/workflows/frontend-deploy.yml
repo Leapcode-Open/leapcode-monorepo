@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    name: Build project
+    name: Frontend Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

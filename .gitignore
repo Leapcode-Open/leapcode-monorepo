@@ -31,5 +31,13 @@ yarn.lock
 
 # vercel
 .vercel
+
+# others
 leapcode-next/.next
 */.env
+*/.idea
+app.yaml
+*/sethucomm-firebase.json
+*/staging-firebase.json
+*.yaml
+*.env
