@@ -7,7 +7,7 @@ This repo is a work in progress
 - [ ] Create docker build for backend code
 - [ ] Add docs to setup this project in local
 
-#### Setup Project
+### Setup Project
 
 This project is a monorepo consisting of code that runs our backend api server and frontend nextjs client. Setting up both projects are necessary to test any of your changes. 
 
@@ -28,4 +28,11 @@ npm run setup
 3. Start the project using the command
 ```
 npm run start
+```
+
+### Cleanup
+
+Copy/paste the following command to cleanup all dependencies and libraries
+```
+npm run clean
 ```
