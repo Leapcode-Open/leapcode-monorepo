@@ -5,7 +5,7 @@ on:
     branches:
     - main
     paths:
-    - 'leapcode-core'/**
+    - 'leapcode-core/**'
 
 jobs:
   build:
