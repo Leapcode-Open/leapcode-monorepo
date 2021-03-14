@@ -269,9 +269,9 @@ export const getStaticProps = async (ctx) => {
     });
     featuredUsers = await featuredUsers.json();
     featuredUsers = await shuffleArray(featuredUsers)
-    featuredUsers.length > 0 ? featuredUsers = featuredUsers.splice(0,20) : null;
+    featuredUsers = featuredUsers.length > 0 ? featuredUsers.splice(0,20) : [];
     projects = await projects.json()
-    //projects = projects.splice(0,3);
+    projects = projects.length > 0 ? projects.splice(0,3) : [];
 
     return {
         props:{
